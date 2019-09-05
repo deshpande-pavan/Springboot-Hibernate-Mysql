@@ -57,6 +57,6 @@ public class NoteController {
 
 		Notes note = noteRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Note", "id", id));
 		noteRepository.delete(note);
-		return ResponseEntity.ok().body(note.toString()+" is deleted from the database");
+		return ResponseEntity.ok().body(note.toString() + " is deleted from the database");
 	}
 }
